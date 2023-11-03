@@ -9,7 +9,25 @@
 </head>
 <body>
     <!-- ここにコンテンツが表示されます -->
-    
+    <div id="message"></div>
+    <form id="psych-test">
+        <div class="question">
+            <p>質問1: あなたは朝型ですか夜型ですか？</p>
+            <label for="morning"><input type="radio" name="q1" value="morning" id="morning"> 朝型</label>
+            <label for="night"><input type="radio" name="q1" value="night" id="night"> 夜型</label>
+        </div>
+        <div class="question">
+            <p>質問2: どちらかと言えば計画的ですか、それとも 衝動的ですか？</p>
+            <label for="planner"><input type="radio" name="q2" value="planner" id="planner"> 計画的</label>
+            <label for="spontaneous"><input type="radio" name="q2" value="spontaneous" id="spontaneous"> 衝動的</label>
+        </div>
+        <div class="question">
+            <p>質問3: 新しいことを始める時、よく考えてから行動しますか、それともすぐに飛び込みますか？</p>
+            <label for="thinker"><input type="radio" name="q3" value="thinker" id="thinker"> よく考える</label>
+            <label for="doer"><input type="radio" name="q3" value="doer" id="doer"> すぐに飛び込む</label>
+        </div>
+        <button type="submit">診断する</button>
+    </form>
     <!-- tsファイルはブラウザで直接コンパイルできないので、ここでmain.jsにトランスパイルする。 -->
     <script src="main.js"></script>
 </body>
