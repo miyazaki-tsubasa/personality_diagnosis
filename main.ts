@@ -28,10 +28,17 @@ function displayResults(answers) {
 
     // 回答結果を表示する文字列を作成
     const results = `あなたの回答は以下の通りです<br>質問1: ${q1Label}<br>質問2: ${q2Label}<br>質問3: ${q3Label}`;
+ 
+    // 結果を表示する前にフォームを非表示にする
+    const form = document.getElementById('psych-test');
+    form.style.display = 'none'; // フォームを非表示にする
 
     // HTMLドキュメント内のIDが 'message' の要素を取得
     // HTMLコンテンツを results 文字列に置き換え
-    document.getElementById('message').innerHTML = results;
+    // 回答結果を表示する
+    const messageElement = document.getElementById('message');
+    messageElement.innerHTML = results;
+    // document.getElementById('message').innerHTML = results;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
