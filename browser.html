@@ -61,7 +61,9 @@
             <label for="practical"><input type="radio" name="q10" value="practical" id="practical"> 実用的</label>
             <label for="creative"><input type="radio" name="q10" value="creative" id="creative"> 創造的</label>
         </div>        
-        <button type="submit">診断する</button>
+        <button type="submit">診断する</button>        
+        <!-- 送信ボタンの直後に警告メッセージ用のdivを配置 -->
+        <div id="warning-message" style="color: red;"></div>
     </form>
     <!-- tsファイルはブラウザで直接コンパイルできないので、ここでmain.jsにトランスパイルする。 -->
     <!-- 診断するボタンを押したときに、jsファイルが実行される。 -->

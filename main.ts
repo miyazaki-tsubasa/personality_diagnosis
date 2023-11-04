@@ -10,7 +10,27 @@ function displayMessage() {
 // フォームが送信されたときのイベントを処理する。
 function handleFormSubmit(event) {
     event.preventDefault();
-    const form = event.target;
+    const form = event.target as HTMLFormElement;
+    let isAllQuestionsAnswered = true;
+    let warningMessage = '';
+
+    // 各質問項目に対して回答があるかを確認
+    for (let i = 1; i <= 10; i++) {
+        if (!form[`q${i}`].value) {
+            isAllQuestionsAnswered = false;
+            warningMessage += `質問${i}に回答してください。<br>`;
+        }
+    }
+
+    // 全ての質問に回答されていなければ警告メッセージを表示
+    if (!isAllQuestionsAnswered) {
+        document.getElementById('warning-message').innerHTML = warningMessage;
+        return; // ここで処理を中断
+    }
+
+    // 警告メッセージをクリア
+    document.getElementById('warning-message').innerHTML = '';
+
     const answers = {
         q1: form.q1.value,
         q2: form.q2.value,
