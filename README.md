@@ -1,9 +1,14 @@
 # 心理診断テストをするためのWebアプリ
 
+## アプリの使い方
+1. Start-Process によってブラウザにリクエストを送る。
+2. ブラウザ上で質問に答えて、最後に「診断する」ボタンを押す。
+3. 診断結果を確認する。
+
 ## 環境構築
 ### Node.jsのインストール
 1. Node.jsの公式ウェブサイト（nodejs.org）にアクセスします。
-2. 推奨されるバージョンを選択し、インストーラーをダウンロードします。
+2. 推奨されるバージョン(今回はv21.1.0)を選択し、インストーラーをダウンロードします。
 3. インストーラの流れ通りにインストールまで進める。(PATHはC:\Program Files\nodejs\ で良い)
 4. インストールの確認 
 ```
@@ -23,3 +28,9 @@ npm install -g typescript
 tsc main.ts
 ```
 を実行するとmain.jsが生成され、JavaScriptファイルはブラウザで直接実行することができる。
+
+ターミナル上でブラウザにリクエストを送る。
+```
+PS C:\Users\t-miy\OneDrive\デスクトップ\self-study\personality_diagnosis\personality_diagnosis> 
+Start-Process "C:\Users\t-miy\OneDrive\デスクトップ\self-study\personality_diagnosis\personality_diagnosis\browser.html"
+```
