@@ -11,62 +11,85 @@
     <!-- ここにコンテンツが表示されます -->
     <div id="message"></div>
     <form id="psych-test">
+        <!-- 質問は別でまとめておいて、ブラウザ上ではランダム表示でも良いかも -->
         <div class="question">
-            <p>質問1: あなたは朝型ですか夜型ですか？</p>
-            <label for="morning"><input type="radio" name="q1" value="morning" id="morning"> 朝型</label>
-            <label for="night"><input type="radio" name="q1" value="night" id="night"> 夜型</label>
+          <!-- 質問1 (開放性に関する質問) -->
+            <p>1. 新しい経験を積極的に求めますか？</p>
+            <label><input type="radio" name="q1" value="yes"> はい</label>
+            <label><input type="radio" name="q1" value="neither"> どちらでもない</label>
+            <label><input type="radio" name="q1" value="yes"> いいえ</label>
         </div>
+          <!-- 質問2 (誠実性に関する質問) -->
         <div class="question">
-            <p>質問2: どちらかと言えば計画的ですか、それとも 衝動的ですか？</p>
-            <label for="planner"><input type="radio" name="q2" value="planner" id="planner"> 計画的</label>
-            <label for="spontaneous"><input type="radio" name="q2" value="spontaneous" id="spontaneous"> 衝動的</label>
+            <p>2. 日々のタスクに対して計画的ですか？</p>
+            <label><input type="radio" name="q2" value="yes"> はい</label>
+            <label><input type="radio" name="q2" value="neither"> どちらでもない</label>
+            <label><input type="radio" name="q2" value="no"> いいえ</label>
         </div>
+        <!-- 質問3 (外向性に関する質問) -->
         <div class="question">
-            <p>質問3: 新しいことを始める時、よく考えてから行動しますか、それともすぐに飛び込みますか？</p>
-            <label for="thinker"><input type="radio" name="q3" value="thinker" id="thinker"> よく考える</label>
-            <label for="doer"><input type="radio" name="q3" value="doer" id="doer"> すぐに飛び込む</label>
+            <p>3. 社交的なイベントが好きですか？</p>
+            <label><input type="radio" name="q3" value="yes"> はい</label>
+            <label><input type="radio" name="q3" value="neither"> どちらでもない</label>
+            <label><input type="radio" name="q3" value="no"> いいえ</label>
         </div>
+        <!-- 質問4 (協調性に関する質問) -->
         <div class="question">
-            <p>質問4: 集団の中でリーダーになりたがりますか、それともフォロワーになりたがりますか？</p>
-            <label for="leader"><input type="radio" name="q4" value="leader" id="leader"> リーダー</label>
-            <label for="follower"><input type="radio" name="q4" value="follower" id="follower"> フォロワー</label>
+            <p>4. 他人の感情に共感しやすいと感じますか？</p>
+            <label><input type="radio" name="q4" value="yes"> はい</label>
+            <label><input type="radio" name="q4" value="neither"> どちらでもない</label>
+            <label><input type="radio" name="q4" value="no"> いいえ</label>
         </div>
+        <!-- 質問5 (神経症的傾向に関する質問) -->
         <div class="question">
-            <p>質問5: 新しい環境にすぐに適応できますか、時間がかかりますか？</p>
-            <label for="adaptable"><input type="radio" name="q5" value="adaptable" id="adaptable"> すぐに適応</label>
-            <label for="takes-time"><input type="radio" name="q5" value="takes-time" id="takes-time"> 時間がかかる</label>
+            <p>5. 小さな問題でも簡単に心配になることがありますか？</p>
+            <label><input type="radio" name="q5" value="yes"> はい</label>
+            <label><input type="radio" name="q5" value="neither"> どちらでもない</label>
+            <label><input type="radio" name="q5" value="no"> いいえ</label>
         </div>
+        <!-- 質問6 (開放性に関する質問) -->
         <div class="question">
-            <p>質問6: 詳細に計画を立てることが好きですか、それとも大まかな計画で十分ですか？</p>
-            <label for="detailed"><input type="radio" name="q6" value="detailed" id="detailed"> 詳細な計画</label>
-            <label for="broad"><input type="radio" name="q6" value="broad" id="broad"> 大まかな計画</label>
+            <p>6. 芸術作品や音楽を深く理解することができると感じますか？</p>
+            <label><input type="radio" name="q6" value="yes"> はい</label>
+            <label><input type="radio" name="q6" value="neither"> どちらでもない</label>
+            <label><input type="radio" name="q6" value="no"> いいえ</label>
         </div>
+        <!-- 質問7 (誠実性に関する質問) -->
         <div class="question">
-            <p>質問7: 問題を解決するとき、論理的ですか、直感に頼りますか？</p>
-            <label for="logical"><input type="radio" name="q7" value="logical" id="logical"> 論理的</label>
-            <label for="intuitive"><input type="radio" name="q7" value="intuitive" id="intuitive"> 直感</label>
+            <p>7. タスクを完了するために余分な時間を費やすことが多いですか？</p>
+            <label><input type="radio" name="q7" value="yes"> はい</label>
+            <label><input type="radio" name="q7" value="neither"> どちらでもない</label>
+            <label><input type="radio" name="q7" value="no"> いいえ</label>
         </div>
+        <!-- 質問8 (外向性に関する質問) -->
         <div class="question">
-            <p>質問8: 人と会話する際、話すことが多いですか、聞くことが多いですか？</p>
-            <label for="listener"><input type="radio" name="q8" value="listener" id="listener"> 聞くことが多い</label>
-            <label for="talkative"><input type="radio" name="q8" value="talkative" id="talkative"> 話すことが多い</label>
+            <p>8. 新しい人と出会うのが楽しみですか？</p>
+            <label><input type="radio" name="q8" value="yes"> はい</label>
+            <label><input type="radio" name="q8" value="neither"> どちらでもない</label>
+            <label><input type="radio" name="q8" value="no"> いいえ</label>
         </div>
+        <!-- 質問9 (協調性に関する質問) -->
         <div class="question">
-            <p>質問9: 決断をする際、迅速ですか、慎重ですか？</p>
-            <label for="careful"><input type="radio" name="q9" value="careful" id="careful"> 慎重</label>
-            <label for="quick"><input type="radio" name="q9" value="quick" id="quick"> 迅速</label>
+            <p>9. 人の助けを借りずに問題を解決することが多いですか？</p>
+            <label><input type="radio" name="q9" value="yes"> はい</label>
+            <label><input type="radio" name="q9" value="neither"> どちらでもない</label>
+            <label><input type="radio" name="q9" value="no"> いいえ</label>
         </div>
+        <!-- 質問10 (神経症的傾向に関する質問) -->
         <div class="question">
-            <p>質問10: 新しいアイディアを考えるとき、実用的なものですか、創造的なものですか？</p>
-            <label for="practical"><input type="radio" name="q10" value="practical" id="practical"> 実用的</label>
-            <label for="creative"><input type="radio" name="q10" value="creative" id="creative"> 創造的</label>
-        </div>        
+            <p>10. 将来に対して不安を感じることがよくありますか？</p>
+            <label><input type="radio" name="q10" value="yes"> はい</label>
+            <label><input type="radio" name="q10" value="neither"> どちらでもない</label>
+            <label><input type="radio" name="q10" value="no"> いいえ</label>
+        </div>
         <button type="submit">診断する</button>        
         <!-- 送信ボタンの直後に警告メッセージ用のdivを配置 -->
         <div id="warning-message" style="color: red;"></div>
     </form>
     <!-- tsファイルはブラウザで直接コンパイルできないので、ここでmain.jsにトランスパイルする。 -->
     <!-- 診断するボタンを押したときに、jsファイルが実行される。 -->
-    <script src="main.js"></script>
+    <script type="module" src="main.js"></script>
+    <script type="module" src="./app/handle_form_submit.js"></script>
+    <script type="module" src="./app/display_results.js"></script>
 </body>
 </html>
