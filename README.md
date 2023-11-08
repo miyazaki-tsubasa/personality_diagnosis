@@ -34,3 +34,22 @@ tsc main.ts
 PS C:\Users\t-miy\OneDrive\デスクトップ\self-study\personality_diagnosis\personality_diagnosis> 
 Start-Process "C:\Users\t-miy\OneDrive\デスクトップ\self-study\personality_diagnosis\personality_diagnosis\browser.html"
 ```
+
+## 各関数の構成
+
+### main.ts
+コメント通りbrowser.html場で生成している「診断する」ボタンを押すと実行される。
+
+#### displayMessage関数(app/display_results.ts)
+簡単なタイトルテキストをブラウザで表示させる
+
+#### handleFormSubmit関数(app/handle_form_submit.ts)
+1. ブラウザ上で選択した項目を再定義
+2. 全ての質問が選択されていないと警告文を出力
+3. ビッグファイブの項目ごとの集計
+4. displayResults関数を実行して、メッセージテキストを取得
+
+#### displayResults関数(app/display_results.ts)
+handleFormSubmit関数で取得したscoresを引数として
+ブラウザ上に表示させるテキストメッセージを定義。
+
