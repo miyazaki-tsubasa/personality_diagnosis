@@ -25,15 +25,15 @@ npm install -g typescript
 
 具体的には
 ```
-tsc main.ts
+tsc 
 ```
-を実行するとmain.jsが生成され、JavaScriptファイルはブラウザで直接実行することができる。
+を実行すると.jsファイルが生成され、JavaScriptファイルはブラウザで直接実行することができる。
 
-ターミナル上でブラウザにリクエストを送る。
+ターミナル上でローカルサーバを立てる。(ブラウザ上で、appディレクトリにアクセスできないため)
 ```
-PS C:\Users\t-miy\OneDrive\デスクトップ\self-study\personality_diagnosis\personality_diagnosis> 
-Start-Process "C:\Users\t-miy\OneDrive\デスクトップ\self-study\personality_diagnosis\personality_diagnosis\browser.html"
+http-server -p 8000
 ```
+実行した際に``` http://127.0.0.1:8000```を実行する。
 
 ## 各関数の構成
 
