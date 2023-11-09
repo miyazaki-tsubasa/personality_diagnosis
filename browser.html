@@ -11,77 +11,7 @@
     <!-- ここにコンテンツが表示されます -->
     <div id="message"></div>
     <form id="psych-test">
-        <!-- 質問は別でまとめておいて、ブラウザ上ではランダム表示でも良いかも -->
-        <div class="question">
-          <!-- 質問1 (開放性に関する質問) -->
-            <p>1. 新しい経験を積極的に求めますか？</p>
-            <label><input type="radio" name="q1" value="yes"> はい</label>
-            <label><input type="radio" name="q1" value="neither"> どちらでもない</label>
-            <label><input type="radio" name="q1" value="yes"> いいえ</label>
-        </div>
-          <!-- 質問2 (誠実性に関する質問) -->
-        <div class="question">
-            <p>2. 日々のタスクに対して計画的ですか？</p>
-            <label><input type="radio" name="q2" value="yes"> はい</label>
-            <label><input type="radio" name="q2" value="neither"> どちらでもない</label>
-            <label><input type="radio" name="q2" value="no"> いいえ</label>
-        </div>
-        <!-- 質問3 (外向性に関する質問) -->
-        <div class="question">
-            <p>3. 社交的なイベントが好きですか？</p>
-            <label><input type="radio" name="q3" value="yes"> はい</label>
-            <label><input type="radio" name="q3" value="neither"> どちらでもない</label>
-            <label><input type="radio" name="q3" value="no"> いいえ</label>
-        </div>
-        <!-- 質問4 (協調性に関する質問) -->
-        <div class="question">
-            <p>4. 他人の感情に共感しやすいと感じますか？</p>
-            <label><input type="radio" name="q4" value="yes"> はい</label>
-            <label><input type="radio" name="q4" value="neither"> どちらでもない</label>
-            <label><input type="radio" name="q4" value="no"> いいえ</label>
-        </div>
-        <!-- 質問5 (神経症的傾向に関する質問) -->
-        <div class="question">
-            <p>5. 小さな問題でも簡単に心配になることがありますか？</p>
-            <label><input type="radio" name="q5" value="yes"> はい</label>
-            <label><input type="radio" name="q5" value="neither"> どちらでもない</label>
-            <label><input type="radio" name="q5" value="no"> いいえ</label>
-        </div>
-        <!-- 質問6 (開放性に関する質問) -->
-        <div class="question">
-            <p>6. 芸術作品や音楽を深く理解することができると感じますか？</p>
-            <label><input type="radio" name="q6" value="yes"> はい</label>
-            <label><input type="radio" name="q6" value="neither"> どちらでもない</label>
-            <label><input type="radio" name="q6" value="no"> いいえ</label>
-        </div>
-        <!-- 質問7 (誠実性に関する質問) -->
-        <div class="question">
-            <p>7. タスクを完了するために余分な時間を費やすことが多いですか？</p>
-            <label><input type="radio" name="q7" value="yes"> はい</label>
-            <label><input type="radio" name="q7" value="neither"> どちらでもない</label>
-            <label><input type="radio" name="q7" value="no"> いいえ</label>
-        </div>
-        <!-- 質問8 (外向性に関する質問) -->
-        <div class="question">
-            <p>8. 新しい人と出会うのが楽しみですか？</p>
-            <label><input type="radio" name="q8" value="yes"> はい</label>
-            <label><input type="radio" name="q8" value="neither"> どちらでもない</label>
-            <label><input type="radio" name="q8" value="no"> いいえ</label>
-        </div>
-        <!-- 質問9 (協調性に関する質問) -->
-        <div class="question">
-            <p>9. 人の助けを借りずに問題を解決することが多いですか？</p>
-            <label><input type="radio" name="q9" value="yes"> はい</label>
-            <label><input type="radio" name="q9" value="neither"> どちらでもない</label>
-            <label><input type="radio" name="q9" value="no"> いいえ</label>
-        </div>
-        <!-- 質問10 (神経症的傾向に関する質問) -->
-        <div class="question">
-            <p>10. 将来に対して不安を感じることがよくありますか？</p>
-            <label><input type="radio" name="q10" value="yes"> はい</label>
-            <label><input type="radio" name="q10" value="neither"> どちらでもない</label>
-            <label><input type="radio" name="q10" value="no"> いいえ</label>
-        </div>
+        <!-- 質問は TypeScript ファイルで動的に生成されます -->
         <button type="submit">診断する</button>        
         <!-- 送信ボタンの直後に警告メッセージ用のdivを配置 -->
         <div id="warning-message" style="color: red;"></div>
@@ -89,7 +19,5 @@
     <!-- tsファイルはブラウザで直接コンパイルできないので、ここでmain.jsにトランスパイルする。 -->
     <!-- 診断するボタンを押したときに、jsファイルが実行される。 -->
     <script type="module" src="main.js"></script>
-    <script type="module" src="./app/handle_form_submit.js"></script>
-    <script type="module" src="./app/display_results.js"></script>
 </body>
 </html>
